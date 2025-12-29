@@ -11,7 +11,11 @@
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 
 .animate-page { animation: fadeUp 1s ease forwards; }
-.animate-item { opacity:0; transform:translateY(25px); animation: fadeUp 0.8s ease forwards; }
+.animate-item { 
+  opacity: 0; 
+  transform: translateY(25px); 
+  animation: fadeUp 0.8s ease forwards; 
+}
 .animate-item[data-delay="0.2"] { animation-delay:0.2s; }
 .animate-item[data-delay="0.4"] { animation-delay:0.4s; }
 .animate-item[data-delay="0.6"] { animation-delay:0.6s; }
@@ -20,6 +24,7 @@
 .animate-item[data-delay="1.2"] { animation-delay:1.2s; }
 .animate-item[data-delay="1.4"] { animation-delay:1.4s; }
 .animate-item[data-delay="1.6"] { animation-delay:1.6s; }
+.animate-item[data-delay="1.8"] { animation-delay:1.8s; }
 
 /* ===== Body ===== */
 body {
@@ -30,6 +35,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+.note {
+  margin-top: 25px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
 }
 
 /* ===== Card ===== */
@@ -98,3 +109,4 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
