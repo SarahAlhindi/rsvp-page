@@ -103,6 +103,38 @@ p { color:#555; line-height:1.7; }
   border-radius:14px; font-size:1rem; cursor:pointer;
 }
 
+h2.animate-name {
+  font-size: 2rem; /* مشابه لحجم h1 السابق */
+  color: var(--dark-green);
+  margin: 10px 0 18px;
+  font-weight: 700;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+.location-link {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.location-link a {
+  display: inline-block;
+  background: var(--soft-beige);
+  color: var(--dark-green);
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.location-link a:hover {
+  background: var(--dark-green);
+  color: var(--off-white);
+  transform: translateY(-2px);
+}
+
+
 /* ===== Progress ===== */
 .progress-overlay {
   position: fixed; inset:0; background: rgba(0,0,0,0.2);
@@ -151,4 +183,5 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
