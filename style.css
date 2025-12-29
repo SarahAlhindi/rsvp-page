@@ -36,6 +36,9 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+h2.animate-name #guestName {
+  font-size: 2.2rem;
+}
 /* حجم اسم الضيف أكبر */
 #guestName {
   font-size: 2.2 rem; /* اختاري الحجم المناسب */
@@ -124,6 +127,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
