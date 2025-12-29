@@ -36,6 +36,13 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+/* حجم اسم الضيف أكبر */
+#guestName {
+  font-size: 1.8rem; /* اختاري الحجم المناسب */
+  color: var(--dark-green);
+  font-weight: 700;
+}
+
 .note {
   margin-top: 25px;
   text-align: center;
@@ -117,5 +124,6 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
