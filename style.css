@@ -1,6 +1,15 @@
+:root {
+  --dark-green: #1f3d2b;
+  --olive-green: #2e4d3a;
+  --off-white: #f7f5f2;
+  --soft-beige: #e8e3dc;
+  --charcoal: #121212;
+  --text-muted: #6f6f6f;
+}
+
 body {
   font-family: 'Cairo', sans-serif;
-  background-color: #f5f2ef;
+  background: linear-gradient(135deg, #0f1a14, #1a2b22);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,58 +17,139 @@ body {
   margin: 0;
 }
 
+/* ===== Card ===== */
 .rsvp-card {
   display: flex;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background-color: var(--off-white);
+  border-radius: 28px;
   overflow: hidden;
-  max-width: 900px;
-  width: 90%;
+  max-width: 920px;
+  width: 92%;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+/* ===== Image Side ===== */
+.image-side {
+  width: 40%;
+  background-color: var(--charcoal);
 }
 
 .image-side img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: contrast(1.05) brightness(0.95);
 }
 
+/* ===== Info Side ===== */
 .info-side {
-  padding: 40px;
   flex: 1;
+  padding: 50px 45px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* ===== Typography ===== */
+h2 {
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
 h1 {
-  color: #2e4d3a;
-  margin: 10px 0;
+  font-size: 2.2rem;
+  color: var(--dark-green);
+  margin: 10px 0 18px;
+  font-weight: 700;
 }
 
-h2, p {
-  color: #7a7a7a;
-}
-
-.rsvp-buttons button {
-  background-color: #2e4d3a;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  margin: 10px 10px 0 0;
-  border-radius: 15px;
-  cursor: pointer;
+p {
+  color: #555;
   font-size: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 25px;
 }
 
-.rsvp-buttons button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
+/* ===== Event Details ===== */
 .event-details {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 0 0 35px;
+}
+
+.event-details li {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Buttons ===== */
+.rsvp-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.rsvp-buttons button {
+  flex: 1;
+  background-color: var(--dark-green);
+  color: var(--off-white);
+  border: none;
+  padding: 15px 0;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(31, 61, 43, 0.35);
+}
+
+.rsvp-buttons button:last-child {
+  background-color: transparent;
+  color: var(--dark-green);
+  border: 1.5px solid var(--dark-green);
+  box-shadow: none;
+}
+
+.rsvp-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.rsvp-buttons button:last-child:hover {
+  background-color: var(--soft-beige);
+}
+
+/* ===== Footer Note ===== */
+.note {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .rsvp-card {
+    flex-direction: column;
+  }
+
+  .image-side {
+    width: 100%;
+    height: 220px;
+  }
+
+  .info-side {
+    padding: 35px 30px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
