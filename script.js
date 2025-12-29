@@ -42,3 +42,4 @@ document.getElementById("yesBtn")
 document.getElementById("noBtn")
   .addEventListener("click", () => sendRSVP(guest, "لن أتمكن"));
 
+
