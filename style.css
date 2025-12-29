@@ -64,6 +64,31 @@
   border-radius: 10px;
   transition: width 1.5s ease;
 }
+.gallery {
+  margin-top: 35px;
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.gallery img {
+  height: 120px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* hide scrollbar stylish */
+.gallery::-webkit-scrollbar { height: 6px; }
+.gallery::-webkit-scrollbar-thumb { background: var(--olive-green); border-radius: 3px; }
+.gallery::-webkit-scrollbar-track { background: #eee; }
+
 
 
 /* ===== Body ===== */
@@ -228,4 +253,5 @@ p {
   color: #777;
   font-size: 0.9rem;
 }
+
 
