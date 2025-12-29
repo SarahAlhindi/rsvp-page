@@ -24,32 +24,47 @@ function closeModal() {
   document.getElementById("modal").classList.add("hidden");
 }
 
+
 // ==========================
 // Send RSVP
 // ==========================
 function sendRSVP(choice) {
-  const formData = new URLSearchParams();
-  formData.append("guest", guest);
-  formData.append("choice", choice);
+  const progress = document.getElementById("progress");
+  const bar = progress.querySelector(".progress-bar-inner");
+  
+  // Show progress
+  progress.classList.add("active");
+  bar.style.width = "0%";
 
-  fetch(WEB_APP_URL, {
-    method: "POST",
-    body: formData
-  })
-    .then(() => {
-      showModal(
-        "تم تسجيل ردك 🌿",
-        `شكرًا لك ${guest}، تم تسجيل ردك: ${choice}`
-      );
-      disableButtons();
-    })
-    .catch(() => {
-      showModal(
-        "حدث خطأ",
-        "لم نتمكن من تسجيل ردك، الرجاء المحاولة لاحقًا"
-      );
-    });
+  setTimeout(() => {
+    bar.style.width = "100%";
+  }, 50);
+
+  // Wait animation then send data
+  setTimeout(() => {
+    const formData = new URLSearchParams();
+    formData.append("guest", guest);
+    formData.append("choice", choice);
+
+    fetch(WEB_APP_URL, { method: "POST", body: formData })
+      .then(() => {
+        progress.classList.remove("active");
+        showModal(
+          "تم تسجيل ردك 🌿",
+          `شكرًا لك ${guest}، تم تسجيل ردك: ${choice}`
+        );
+        disableButtons();
+      })
+      .catch(() => {
+        progress.classList.remove("active");
+        showModal(
+          "حدث خطأ",
+          "لم نتمكن من تسجيل ردك، الرجاء المحاولة لاحقًا"
+        );
+      });
+  }, 1600); // مدة الانيميشن 1.6 ثانية
 }
+
 
 // ==========================
 // Disable buttons after click
@@ -69,3 +84,4 @@ document.getElementById("yesBtn")
 
 document.getElementById("noBtn")
   .addEventListener("click", () => sendRSVP("لن أتمكن"));
+
