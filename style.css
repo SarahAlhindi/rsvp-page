@@ -46,7 +46,7 @@ h2.animate-name #guestName {
   font-weight: 700;
 }
 #guestName {
-  font-size: 2.2rem !important;
+  font-size: 2rem !important;
 }
 
 .note {
@@ -130,6 +130,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
