@@ -103,8 +103,7 @@ p { color:#555; line-height:1.7; }
   border-radius:14px; font-size:1rem; cursor:pointer;
 }
 
-h2.animate-name {
-  font-size: 2rem; /* مشابه لحجم h1 السابق */
+h3.animate-name {
   color: var(--dark-green);
   margin: 10px 0 18px;
   font-weight: 700;
@@ -183,5 +182,6 @@ h2.animate-name {
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
