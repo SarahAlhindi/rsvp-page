@@ -50,5 +50,6 @@ function sendRSVP(choice) {
 }
 
 // Button listeners
-document.getElementById("yesBtn").addEventListener("click", () => sendRSVP("موافقة"));
+document.getElementById("yesBtn").addEventListener("click", () => sendRSVP("قبول"));
 document.getElementById("noBtn").addEventListener("click", () => sendRSVP("اعتذار"));
+
