@@ -41,9 +41,12 @@ h2.animate-name #guestName {
 }
 /* حجم اسم الضيف أكبر */
 #guestName {
-  font-size: 2.2 rem; /* اختاري الحجم المناسب */
+  font-size: 2.2rem; /* اختاري الحجم المناسب */
   color: var(--dark-green);
   font-weight: 700;
+}
+#guestName {
+  font-size: 2.2rem !important;
 }
 
 .note {
@@ -127,6 +130,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
