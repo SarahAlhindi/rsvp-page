@@ -37,16 +37,16 @@ body {
   align-items: flex-start;
 }
 h2.animate-name #guestName {
-  font-size: 2.2rem;
+  font-size: 1.3rem;
 }
 /* حجم اسم الضيف أكبر */
 #guestName {
-  font-size: 1.8rem; /* اختاري الحجم المناسب */
+  font-size: 1.3rem; /* اختاري الحجم المناسب */
   color: var(--dark-green);
   font-weight: 700;
 }
 #guestName {
-  font-size: 1.8rem !important;
+  font-size: 1.3rem !important;
 }
 
 .note {
@@ -130,6 +130,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
