@@ -11,7 +11,7 @@ document.getElementById("guestName").innerText = guest;
 // Google Apps Script Web App URL (NEW)
 // ==========================
 const WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbxAgqFkj0lhmELBBmGXAoemkuivLVh8_t9ToIK9bRKZVCB8WgCXAGF8TAL4bkWzpc8aNQ/exec";
+  "https://script.google.com/macros/s/AKfycbyUC68r7S6R2AdPCeHyT6woUoCgtemGnRZO7Qdh8fDQ5G50_Udb8yN9xUAtau8Egsm52Q/exec";
 
 // ==========================
 // Send RSVP (FORM DATA – no CORS issues)
@@ -41,5 +41,6 @@ document.getElementById("yesBtn")
 
 document.getElementById("noBtn")
   .addEventListener("click", () => sendRSVP(guest, "لن أتمكن"));
+
 
 
