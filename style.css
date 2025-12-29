@@ -121,10 +121,22 @@ p { color:#555; line-height:1.7; }
 /* ===== Gallery ===== */
 .gallery { margin-top:35px; display:flex; overflow-x:auto; gap:15px; padding-bottom:10px; }
 .gallery img {
-  height:120px; border-radius:14px; cursor:pointer;
+  height: 120px;
+  border-radius: 14px;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Background dark frame */
+  background: #1f3d2b; /* dark green frame */
+  padding: 5px; /* يعطي إحساس بإطار */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* يعطي depth */
+  object-fit: cover;
 }
-.gallery img:hover { transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.25); }
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
 .gallery::-webkit-scrollbar { height:6px; }
 .gallery::-webkit-scrollbar-thumb { background: var(--olive-green); border-radius:3px; }
 .gallery::-webkit-scrollbar-track { background:#eee; }
@@ -139,3 +151,4 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
