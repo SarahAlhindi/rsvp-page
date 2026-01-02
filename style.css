@@ -5,6 +5,7 @@
   --soft-beige: #e8e3dc;
   --charcoal: #0f1412;
   --text-muted: #6f6f6f;
+  --light-green: #3f6b55;
 }
 
 /* ===== Animations ===== */
@@ -42,7 +43,7 @@ h2.animate-name #guestName {
 /* حجم اسم الضيف أكبر */
 #guestName {
   font-size: 1.6rem; /* اختاري الحجم المناسب */
-  color: var(--dark-green);
+  color: var(--light-green);
   font-weight: 700;
 }
 #guestName {
@@ -62,7 +63,7 @@ h2.animate-name #guestName {
   font-weight: 500;
   color: var(--text-muted);
   margin-left: 6px;
-  font-size: 0.9rem;
+  font-size: 0.6rem;
 }
 
 
@@ -146,6 +147,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
