@@ -84,7 +84,13 @@ h2.animate-name {
 
 /* ===== Image ===== */
 .image-side { height: 260px; }
-.image-side img { width:100%; height:100%; object-fit:cover; filter: brightness(0.9) contrast(1.05); }
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;   /* 👈 هذا هو المهم */
+  filter: brightness(0.9) contrast(1.05);
+}
 
 /* ===== Info ===== */
 .info-side { padding: 40px 28px 60px; position: relative; }
@@ -139,6 +145,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
