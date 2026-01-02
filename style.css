@@ -49,6 +49,33 @@ h2.animate-name #guestName {
   font-size: 1.6rem !important;
 }
 
+/* ===== Decorative Elements ===== */
+.decor-flower {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.decor-branch {
+  position: absolute;
+  top: 120px;
+  right: -40px; /* غيريها left لو تبينها باليسار */
+  height: 420px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Ensure card can position absolute children */
+.rsvp-card {
+  position: relative;
+  overflow: hidden;
+}
+
+
 .note {
   margin-top: 25px;
   text-align: center;
@@ -130,6 +157,7 @@ p { color:#555; line-height:1.7; }
   .info-side{ padding:35px 25px; }
   h1{ font-size:1.8rem; }
 }
+
 
 
 
