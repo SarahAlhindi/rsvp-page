@@ -1,6 +1,6 @@
 // Guest name from URL
 const params = new URLSearchParams(window.location.search);
-const guest = params.get("guest") || "ضيفنا الكريم";
+const guest = params.get("guest") || "ضيفتنا الكريمة";
 document.getElementById("guestName").innerText = guest;
 
 // Google Apps Script Web App
@@ -52,4 +52,5 @@ function sendRSVP(choice) {
 // Button listeners
 document.getElementById("yesBtn").addEventListener("click", () => sendRSVP("قبول"));
 document.getElementById("noBtn").addEventListener("click", () => sendRSVP("اعتذار"));
+
 
